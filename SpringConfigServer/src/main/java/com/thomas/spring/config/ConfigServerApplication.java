@@ -1,13 +1,13 @@
 package com.thomas.spring.config;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.cloud.client.SpringCloudApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.config.server.EnableConfigServer;
 
 /**
  * Created by thomas on 17/8/14.
  */
-@SpringCloudApplication
+@SpringBootApplication
 @EnableConfigServer
 public class ConfigServerApplication
 {
