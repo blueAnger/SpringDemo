@@ -2,25 +2,24 @@ package com.thomas.spring.web.controller;
 
 import com.thomas.spring.web.bean.JdbcProperties;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
 
 /**
- * Created by thomas on 17/8/14.
+ * Created by thomas on 17/8/16.
  */
 @RestController
-@RequestMapping(value = "/test")
 public class TestController
 {
     @Autowired
-    private JdbcProperties jdbcProperties;
+    private RestTemplate restTemplate;
 
-    @RequestMapping(value = "/jdbc", method = RequestMethod.GET)
-    public JdbcProperties getConfig()
+    @RequestMapping(value = "/test", method = RequestMethod.GET)
+    public JdbcProperties test()
     {
-        return jdbcProperties;
+        return restTemplate.getForObject("http://spring-service/test/jdbc", JdbcProperties.class);
     }
 
 }

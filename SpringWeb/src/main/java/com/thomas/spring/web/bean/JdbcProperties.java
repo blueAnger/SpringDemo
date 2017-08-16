@@ -1,14 +1,9 @@
 package com.thomas.spring.web.bean;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
-
 /**
  * Created by thomas on 17/8/14.
  */
 
-@Component
-@ConfigurationProperties(prefix = "jdbc")
 public class JdbcProperties
 {
     public String url;
