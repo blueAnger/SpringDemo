@@ -21,12 +21,22 @@ a demo of spring frameworks such as spring-boot, spring-cloud
 
     a simple restful backend，invoke services of SpringService through eureka
     
+- SpringZookeeperService
+
+    Like SpringService, except it connects to zookeeper server instead of eureka server
+    
 ## Boot Sequence
+### Spring Cloud Eureka
 
 1. SpringConfigServer
 2. SpringEurekaServer
 3. SpringService
 4. SpringWeb
 
-## Test
-curl localhost:8080/test
+Test——curl localhost:8080/test/jdbc
+
+### Spring Cloud Zookeeper
+1. SpringZookeeperService
+2. SpringWeb
+
+Test——curl localhost:8080/test/user
