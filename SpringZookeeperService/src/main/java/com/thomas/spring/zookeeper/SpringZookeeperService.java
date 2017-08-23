@@ -1,20 +1,19 @@
-package com.thomas.spring.config;
+package com.thomas.spring.zookeeper;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.config.server.EnableConfigServer;
 
 /**
- * Created by thomas on 17/8/14.
+ * Created by thomas on 17/8/22.
  */
+
 @SpringBootApplication
-@EnableConfigServer
-//@EnableDiscoveryClient
-public class ConfigServerApplication
+@EnableDiscoveryClient
+public class SpringZookeeperService
 {
     public static void main(String[] args)
     {
-        SpringApplication.run(ConfigServerApplication.class, args);
+        SpringApplication.run(SpringZookeeperService.class, args);
     }
 }

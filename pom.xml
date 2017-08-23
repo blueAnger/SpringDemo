@@ -13,6 +13,8 @@
         <module>SpringConfigServer</module>
         <module>SpringEurekaServer</module>
         <module>SpringWeb</module>
+        <module>SpringSecurity</module>
+        <module>SpringZookeeperService</module>
     </modules>
 
     <parent>
